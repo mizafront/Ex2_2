@@ -4,24 +4,27 @@ import home1.PostObject.Comments
 import home1.PostObject.Reposts
 
 fun main() {
-    val theFirstComments = Comments(
+    val firstComments = Comments(
             canPost = true
     )
 
-    val theFirstReposts = Reposts()
+    val firstReposts = Reposts()
 
 
-    val theFirstPost = Post(
+    val firstPost = Post(
             id = 1,
-            comments = theFirstComments,
-            reposts = theFirstReposts,
+            comments = firstComments,
+            reposts = firstReposts,
 
     )
 
-    println(theFirstPost)
-    PostService.add(theFirstPost)
-    println(PostService.update(theFirstPost))
-    println(theFirstPost)
+    println(firstPost)
+    PostService.add(firstPost)
+    println(firstPost)
+    println(PostService.update(firstPost))
+    println(firstPost)
+
+
 }
 
 

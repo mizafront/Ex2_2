@@ -1,7 +1,7 @@
 package home1
 
 object PostService {
-    private var nextId: Int = 0
+    private var nextId: Int = 1
     private var posts = emptyArray<Post>()
 
     fun add(post: Post): Post {

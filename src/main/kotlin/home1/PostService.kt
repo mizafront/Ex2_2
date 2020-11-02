@@ -14,10 +14,9 @@ object PostService {
     fun update(post: Post): Boolean {
         for (updatePost in posts) {
             if (updatePost.id == post.id) {
-                updatePost.id = 14
                 updatePost.text = "New text.txt"
                 println("Пост обновлён")
-                return true
+                return false
             }
             break
         }

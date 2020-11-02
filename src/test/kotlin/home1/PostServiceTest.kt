@@ -22,7 +22,7 @@ internal class PostServiceTest {
     fun add() {
         var testParam: Boolean = true
         PostService.add(firstPost)
-        if (firstPost.id == 1) testParam = false
+        if (firstPost.id == 0) testParam = false
         assertEquals(true, testParam)
     }
 

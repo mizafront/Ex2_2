@@ -4,10 +4,10 @@ import home1.PostObject.Comments
 import home1.PostObject.Reposts
 
 data class Post(
-        val id: Long = 0,
+        var id: Int = 0,
         val ownerId: Long = 0,
         val title: String = "",
-        val text: String = "",
+        var text: String = "",
         val friendsOnly: Boolean = true,
         var comments: Comments = Comments(),
         var reposts: Reposts = Reposts(),

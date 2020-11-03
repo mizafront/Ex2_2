@@ -27,22 +27,22 @@ internal class PostServiceTest {
     }
 
     @Test
-    fun updateRealID() {
+    fun updateTrue() {
         PostService.add(firstPost)
         assertEquals(true, PostService.update(firstPost))
     }
 
     @Test
-    fun updateNotRealID() {
-        val theFirstComments = Comments (
+    fun updateFalse() {
+        val firstComments = Comments (
                 canPost = true
         )
-        val theFirstReposts = Reposts ()
+        val firstReposts = Reposts ()
 
-        val secondPost = Post (
-                id = 5,
-                comments = theFirstComments,
-                reposts = theFirstReposts,
+        val secondPost = Post(
+                id = 1,
+                comments = firstComments,
+                reposts = firstReposts
         )
         assertEquals(false, PostService.update(secondPost))
     }

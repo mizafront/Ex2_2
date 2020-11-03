@@ -16,7 +16,7 @@ object PostService {
             if (updatePost.id == post.id) {
                 updatePost.text = "New text.txt"
                 println("Пост обновлён")
-                return false
+                return true
             }
             break
         }

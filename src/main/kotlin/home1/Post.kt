@@ -1,8 +1,5 @@
 package home1
 
-import home1.PostObject.Comments
-import home1.PostObject.Reposts
-
 data class Post(
         var id: Int = 0,
         val ownerId: Long = 0,

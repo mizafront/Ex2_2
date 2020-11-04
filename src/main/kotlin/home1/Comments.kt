@@ -1,4 +1,4 @@
-package home1.PostObject
+package home1
 
 data class Comments(
         val count: Int = 0,

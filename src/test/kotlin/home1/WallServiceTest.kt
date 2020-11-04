@@ -1,12 +1,10 @@
 package home1
 
-import home1.PostObject.Comments
-import home1.PostObject.Reposts
 import org.junit.Test
 
 import org.junit.Assert.*
 
-internal class PostServiceTest {
+internal class WallServiceTest {
     val firstComments = Comments (
             canPost = true
     )
@@ -21,15 +19,15 @@ internal class PostServiceTest {
     @Test
     fun add() {
         var testParam: Boolean = true
-        PostService.add(firstPost)
+        WallService.add(firstPost)
         if (firstPost.id == 0) testParam = false
         assertEquals(true, testParam)
     }
 
     @Test
     fun updateTrue() {
-        PostService.add(firstPost)
-        assertEquals(true, PostService.update(firstPost))
+        WallService.add(firstPost)
+        assertEquals(true, WallService.update(firstPost))
     }
 
     @Test
@@ -44,6 +42,6 @@ internal class PostServiceTest {
                 comments = firstComments,
                 reposts = firstReposts
         )
-        assertEquals(false, PostService.update(secondPost))
+        assertEquals(false, WallService.update(secondPost))
     }
 }

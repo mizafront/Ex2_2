@@ -1,13 +1,12 @@
 package home1
 
-object PostService {
-    private var nextId: Int = 1
+object WallService {
     private var posts = emptyArray<Post>()
 
     fun add(post: Post): Post {
         posts += post
-        post.id = nextId
-        nextId++
+        post.id ++
+
         return posts.last()
     }
 
